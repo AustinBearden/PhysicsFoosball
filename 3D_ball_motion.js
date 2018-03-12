@@ -4,6 +4,9 @@
 
 //including math library
 
+//add jQuery for output to html page
+$(document).ready(function() {
+
 function Ball() {
 
     this.X = 4.00;
@@ -29,16 +32,19 @@ function Ball() {
     };
     this.get_position_X = function() {
 
+        document.getElementById("x-axis").innerHTML = "X-Coordinate: " + this.X;
         console.log(this.X);
 
     };
     this.get_position_Y = function() {
 
+        document.getElementById("y-axis").innerHTML = "Y-Coordinate: " + this.Y;
         console.log(this.Y);
 
     };
     this.get_position_Z = function() {
 
+        document.getElementById("z-axis").innerHTML = "Z-Coordinate: " + this.Z;
         console.log(this.Z);
 
     };
@@ -51,3 +57,5 @@ ball_move_1.move(3.5, 45, 45, 5);
 ball_move_1.get_position_X();
 ball_move_1.get_position_Y();
 ball_move_1.get_position_Z();
+
+});
