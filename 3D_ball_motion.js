@@ -33,19 +33,19 @@ function Ball() {
     this.get_position_X = function() {
 
         //output to HTML page
-        document.getElementById("x-axis").innerHTML = this.X;
+        document.getElementById("x-axis").innerHTML = this.X + " meters";
 
     };
     this.get_position_Y = function() {
         
         //output to HTML page
-        document.getElementById("y-axis").innerHTML = this.Y;
+        document.getElementById("y-axis").innerHTML = this.Y + " meters";
 
     };
     this.get_position_Z = function() {
 
         //output to HTML page
-        document.getElementById("z-axis").innerHTML = this.Z;
+        document.getElementById("z-axis").innerHTML = this.Z + " meters";
 
     };
 
@@ -56,16 +56,24 @@ function calculateAll() {
 
     //get values from input boxes
     //my problem is here right here and Now I am going to solve it!!!!
-    var X_input = document.getElementById('Xcoord').value;
+    var X_input = parseFloat(document.getElementById('Xcoord').value);
     console.log(X_input);
-    var Y_input = document.getElementById('Ycoord').value;
+    var Y_input = parseFloat(document.getElementById('Ycoord').value);
     console.log(Y_input);
-    var Z_input = document.getElementById('Zcoord').value;
+    var Z_input = parseFloat(document.getElementById('Zcoord').value);
     console.log(Z_input);
+    var speed = parseFloat(document.getElementById('SpeedInp').value);
+    console.log(speed);
+    var XYangle = parseFloat(document.getElementById('XYDirection').value);
+    console.log(XYangle);
+    var XZangle = parseFloat(document.getElementById('XZDirection').value);
+    console.log(XZangle);
+    var time = parseFloat(document.getElementById('TimeInp').value);
+    console.log(time);
     
     ball_move_1 = new Ball();
     ball_move_1.set_position(X_input, Y_input, Z_input);
-    ball_move_1.move(3.5, 45, 45, 5);
+    ball_move_1.move(speed, XYangle, XZangle, time);
     ball_move_1.get_position_X();
     ball_move_1.get_position_Y();
     ball_move_1.get_position_Z();

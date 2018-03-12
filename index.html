@@ -10,22 +10,35 @@ A-Frame Basics from https://github.com/donmccurdy/aframe-physics-system
 
 <head>
     <title>Physics Foosball: 3D Ball Motion</title>
-    <header>
-
-    </header>
+    
 
 </head>
+
+    <header>
+
+        <h1>Motion of Ball [Approach 2]</h1>
+
+    </header>
 
 <body>
 
     <!-- Create an form that will take in all the starting parameters (X, Y, Z positions, starting velocity, and two angles) -->
-    <label>Starting X-Coordinate</label>
-    <input type="text" id="Xcoord" name="Xcoor" value=""></input> <br/>
-    <label>Starting Y-Coordinate</label>
-    <input type="text" id="Ycoord" name="Ycoor" value=""></input> <br/>
+    <label>Starting X-Coordinate</label> 
+    <input type="text" id="Xcoord" name="Xcoor" value=""></input> <label>meters</label> <br/>
+    <label>Starting Y-Coordinate</label> 
+    <input type="text" id="Ycoord" name="Ycoor" value=""></input> <label>meters</label> <br/>
     <label>Starting Z-Coordinate</label>
-    <input type="text" id="Zcoord" name="Zcoor" value=""></input> <br/>
-    <input id="calculate" type="button"></input>
+    <input type="text" id="Zcoord" name="Zcoor" value=""></input> <label>meters</label>  <br/>
+    <label>Speed</label> 
+    <input type="text" id="SpeedInp" namd="Speed" value=""></input> <label>meters per second</label> <br/>
+    <label>X-Y Direction</label> 
+    <input type="text" id="XYDirection" namd="XYDirect" value=""></input> <label>degrees</label> <br/>
+    <label>X-Z Direction</label> 
+    <input type="text" id="XZDirection" namd="XZDirect" value=""></input> <label>degrees</label> <br/>
+    <label>Time</label> 
+    <input type="text" id="TimeInp" namd="Time" value=""></input> <label>seconds</label> <br/>
+    <!-- Button for submit -->
+    <input id="calculate" type="submit"></input>
 
     <!-- First start by giving output as simple output to screen from JavaScript file -->
     <p id="x-axis"></p>
