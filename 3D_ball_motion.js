@@ -51,11 +51,26 @@ function Ball() {
 
 }
 
-ball_move_1 = new Ball();
-ball_move_1.set_position(4.0, -4.0, 4.0);
-ball_move_1.move(3.5, 45, 45, 5);
-ball_move_1.get_position_X();
-ball_move_1.get_position_Y();
-ball_move_1.get_position_Z();
+
+
+//Accesses button from html	
+var calculate = document.getElementById("coolDude");
+
+//execute calculations when button is clicked
+calculate.addEventListener("click", function() {
+
+    //get values from input boxes
+    var X_input = document.getElementById("X-coord");
+    var Y_input = document.getElementById("Y-coord");
+    var Z_input = document.getElementById("Z-coord");
+    
+    ball_move_1 = new Ball();
+    ball_move_1.set_position(X_input, Y_input, Z_input);
+    ball_move_1.move(3.5, 45, 45, 5);
+    ball_move_1.get_position_X();
+    ball_move_1.get_position_Y();
+    ball_move_1.get_position_Z();
+    	
+}, false);
 
 });
