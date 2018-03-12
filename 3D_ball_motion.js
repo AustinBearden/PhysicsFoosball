@@ -2,47 +2,52 @@
 //Author: Austin Bearden
 //Date Created: 3/11/2018
 
+//including math library
+
 function Ball() {
 
-    this.X = 0.00;
+    this.X = 4.00;
     this.Y = 0.00;
-    //this.Z = 0.00;
+    this.Z = 0.00;
     this.Velocity = 0.00;
-    this.set_position = function(x, y) {
+    this.set_position = function(x, y, z) {
         this.X = x;
         this.Y = y;
-        //this.Z = z;
+        this.Z = z;
     
     };
-    this.move = function(velocity, directionXY, time) {
+    this.move = function(velocity, directionXY, directionXZ, time) {
         //now compute where ball will be after specified time given
         //use the equation Rfinal = Rinitial + velocity * (time in motion)
 
-        x_inter = X + (velocity * time);
-        y_inter = Y + (velocity * time);
-        //z_inter = Z + (velocity * time);
-
-        x_final = 
-        y_final = 
-        //z_final = 
+        x_final = this.X + (velocity*Math.cos((directionXY*Math.PI)/180) * time);
+        y_final = this.Y + (velocity*Math.sin((directionXY*Math.PI)/180) * time);
+        z_final = this.Z + (velocity*Math.cos((directionXZ*Math.PI)/180) * time);
         
-        set_position(x_final, y_final);
+        this.set_position(x_final, y_final, z_final);
 
     };
     this.get_position_X = function() {
 
-        return X;
+        console.log(this.X);
 
     };
     this.get_position_Y = function() {
 
-        return Y;
+        console.log(this.Y);
 
     };
-    //this.get_position_Z = function() {
+    this.get_position_Z = function() {
 
-    //    return Z;
+        console.log(this.Z);
 
-    //};
+    };
 
 }
+
+ball_move_1 = new Ball();
+ball_move_1.set_position(4.0, -4.0, 4.0);
+ball_move_1.move(3.5, 45, 45, 5);
+ball_move_1.get_position_X();
+ball_move_1.get_position_Y();
+ball_move_1.get_position_Z();
