@@ -12,31 +12,28 @@ A-Frame Basics from https://github.com/donmccurdy/aframe-physics-system
     <title>Physics Foosball: 3D Ball Motion</title>
     <header>
 
-        <!-- This links to the jQuery library so your js code will work
-		Always include this *before* your own code! -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-        <script src="3D_ball_motion.js"></script>
     </header>
 
 </head>
 
 <body>
-    <form action="index.html" method="post">
+
     <!-- Create an form that will take in all the starting parameters (X, Y, Z positions, starting velocity, and two angles) -->
     <label>Starting X-Coordinate</label>
-    <input type="text" id="X-coord" name="X-coord"></input> <br/>
+    <input type="text" id="Xcoord" name="Xcoor"></input> <br/>
     <label>Starting Y-Coordinate</label>
-    <input type="text" id="Y-coord" name="Y-coord"></input> <br/>
+    <input type="text" id="Ycoord" name="Ycoor"></input> <br/>
     <label>Starting Z-Coordinate</label>
-    <input type="text" id="Z-coord" name="Z-coord"></input> <br/>
-    <input id="coolDude" type="button"></input>
-    </form>
+    <input type="text" id="Zcoord" name="Zcoor"></input> <br/>
+    <input id="calculate" type="button"></input>
 
     <!-- First start by giving output as simple output to screen from JavaScript file -->
     <p id="x-axis"></p>
     <p id="y-axis"></p>
     <p id="z-axis"></p>
+
+
+    <script src="3D_ball_motion.js"></script>
 
 </body>
 

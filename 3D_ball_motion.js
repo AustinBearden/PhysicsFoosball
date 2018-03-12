@@ -4,12 +4,10 @@
 
 //including math library
 
-//add jQuery for output to html page
-$(document).ready(function() {
-
+//Ball class
 function Ball() {
 
-    this.X = 4.00;
+    this.X = 0.00;
     this.Y = 0.00;
     this.Z = 0.00;
     this.Velocity = 0.00;
@@ -20,9 +18,9 @@ function Ball() {
     
     };
     this.move = function(velocity, directionXY, directionXZ, time) {
+        
         //now compute where ball will be after specified time given
         //use the equation Rfinal = Rinitial + velocity * (time in motion)
-
         x_final = this.X + (velocity*Math.cos((directionXY*Math.PI)/180) * time);
         y_final = this.Y + (velocity*Math.sin((directionXY*Math.PI)/180) * time);
         z_final = this.Z + (velocity*Math.cos((directionXZ*Math.PI)/180) * time);
@@ -32,45 +30,48 @@ function Ball() {
     };
     this.get_position_X = function() {
 
-        document.getElementById("x-axis").innerHTML = "X-Coordinate: " + this.X;
-        console.log(this.X);
+       document.getElementById("x-axis").innerHTML = this.X;
 
     };
     this.get_position_Y = function() {
 
-        document.getElementById("y-axis").innerHTML = "Y-Coordinate: " + this.Y;
-        console.log(this.Y);
+       document.getElementById("y-axis").innerHTML = this.Y;
 
     };
     this.get_position_Z = function() {
 
-        document.getElementById("z-axis").innerHTML = "Z-Coordinate: " + this.Z;
-        console.log(this.Z);
+       document.getElementById("z-axis").innerHTML = this.Z;
 
     };
 
 }
 
-
-
-//Accesses button from html	
-var calculate = document.getElementById("coolDude");
-
 //execute calculations when button is clicked
-calculate.addEventListener("click", function() {
+function calculateAll() {
 
     //get values from input boxes
-    var X_input = document.getElementById("X-coord");
-    var Y_input = document.getElementById("Y-coord");
-    var Z_input = document.getElementById("Z-coord");
+    //my problem is here right here and Now I am going to solve it!!!!
+    var X_input = document.getElementById('Xcoord');
+    X_input_float = parseFloat(X_input.focus());
+    console.log(X_input_float());
+    var Y_input = document.getElementById('Ycoord');
+    Y_input_float = parseFloat(Y_input.focus());
+    console.log(Y_input_float);
+    var Z_input = document.getElementById('Zcoord')
+    Z_input_float = parseFloat(Z_input.focus());
+    console.log(Z_input_float);
+
+    //use function parseInt to convet string to integer
     
     ball_move_1 = new Ball();
-    ball_move_1.set_position(X_input, Y_input, Z_input);
+    ball_move_1.set_position(X_input_float, Y_input_float, Z_input_float);
     ball_move_1.move(3.5, 45, 45, 5);
     ball_move_1.get_position_X();
     ball_move_1.get_position_Y();
     ball_move_1.get_position_Z();
     	
-}, false);
+}
 
-});
+//Accesses button from html	
+var calculate = document.getElementById("calculate");
+calculate.addEventListener("click", function() { calculateAll(); } );
