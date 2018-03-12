@@ -7,10 +7,12 @@
 //Ball class
 function Ball() {
 
+    //initalize variables
     this.X = 0.00;
     this.Y = 0.00;
     this.Z = 0.00;
     this.Velocity = 0.00;
+    //declare and define methods
     this.set_position = function(x, y, z) {
         this.X = x;
         this.Y = y;
@@ -18,7 +20,7 @@ function Ball() {
     
     };
     this.move = function(velocity, directionXY, directionXZ, time) {
-        
+
         //now compute where ball will be after specified time given
         //use the equation Rfinal = Rinitial + velocity * (time in motion)
         x_final = this.X + (velocity*Math.cos((directionXY*Math.PI)/180) * time);
@@ -30,17 +32,20 @@ function Ball() {
     };
     this.get_position_X = function() {
 
-       document.getElementById("x-axis").innerHTML = this.X;
+        //output to HTML page
+        document.getElementById("x-axis").innerHTML = this.X;
 
     };
     this.get_position_Y = function() {
-
-       document.getElementById("y-axis").innerHTML = this.Y;
+        
+        //output to HTML page
+        document.getElementById("y-axis").innerHTML = this.Y;
 
     };
     this.get_position_Z = function() {
 
-       document.getElementById("z-axis").innerHTML = this.Z;
+        //output to HTML page
+        document.getElementById("z-axis").innerHTML = this.Z;
 
     };
 
@@ -60,8 +65,6 @@ function calculateAll() {
     var Z_input = document.getElementById('Zcoord')
     Z_input_float = parseFloat(Z_input.focus());
     console.log(Z_input_float);
-
-    //use function parseInt to convet string to integer
     
     ball_move_1 = new Ball();
     ball_move_1.set_position(X_input_float, Y_input_float, Z_input_float);
