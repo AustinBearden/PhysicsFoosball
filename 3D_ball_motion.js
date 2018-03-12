@@ -56,18 +56,15 @@ function calculateAll() {
 
     //get values from input boxes
     //my problem is here right here and Now I am going to solve it!!!!
-    var X_input = document.getElementById('Xcoord');
-    X_input_float = parseFloat(X_input.focus());
-    console.log(X_input_float());
-    var Y_input = document.getElementById('Ycoord');
-    Y_input_float = parseFloat(Y_input.focus());
-    console.log(Y_input_float);
-    var Z_input = document.getElementById('Zcoord')
-    Z_input_float = parseFloat(Z_input.focus());
-    console.log(Z_input_float);
+    var X_input = document.getElementById('Xcoord').value;
+    console.log(X_input);
+    var Y_input = document.getElementById('Ycoord').value;
+    console.log(Y_input);
+    var Z_input = document.getElementById('Zcoord').value;
+    console.log(Z_input);
     
     ball_move_1 = new Ball();
-    ball_move_1.set_position(X_input_float, Y_input_float, Z_input_float);
+    ball_move_1.set_position(X_input, Y_input, Z_input);
     ball_move_1.move(3.5, 45, 45, 5);
     ball_move_1.get_position_X();
     ball_move_1.get_position_Y();
