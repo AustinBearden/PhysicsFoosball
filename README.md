@@ -7,4 +7,4 @@ Project 1:
     
      Approach 1: Write the program in .js and use a fullfledged physics engine to model the movements
      
-     <a href="https://github.com/AustinBearden/PhysicsFoosball/tree/Approach_2">Approach 2:</a> Write the program in .js but this time don't use any physics libraries, write the whole program yourself
+     Approach 2: Write the program in .js but this time don't use any physics libraries, write the whole program yourself
