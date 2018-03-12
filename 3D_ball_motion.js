@@ -1,6 +1,7 @@
 //this is approach 2
 //Author: Austin Bearden
 //Date Created: 3/11/2018
+//Last Modified: 3/12/2018
 
 //including math library
 
