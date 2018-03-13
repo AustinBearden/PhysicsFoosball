@@ -9,4 +9,4 @@ Project 1:
      
      Approach 2: Write the program in .js but this time don't use any physics libraries, write the whole program yourself
      
-     https://cs.iupui.edu/~aibearde/PhysicsFoosball/
+            https://cs.iupui.edu/~aibearde/PhysicsFoosball/
