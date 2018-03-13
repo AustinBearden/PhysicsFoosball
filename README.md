@@ -1,5 +1,5 @@
 # PhysicsFoosball
-Will keep track of my progress of particular components of my Physics engine for my virtual foosball game.
+Will keep track of my progress of particular components of my physics engine for my virtual foosball game.
 
 Project 1:
 
