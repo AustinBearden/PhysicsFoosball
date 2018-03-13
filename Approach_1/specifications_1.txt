@@ -1,1 +1,3 @@
 Using physics engine: https://github.com/schteppe/cannon.js
+
+I am going to build a ball motion calculator with the cannon.js physics engine. I will be giving the calculator a point mass's starting x, y, and z position. Its starting velocity, and starting xy and xz directions. I will also give its time in motion. The calculator will give its final x, y, and z coordinates after the specified amount of time in motion.
