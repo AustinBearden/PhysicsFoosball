@@ -34,3 +34,18 @@ var max_sub_steps = 3; // figure out these last two lines
 
 //Start the simulation loop
 var last_time;
+(function simloop(time){
+    requestAnimationFrame(simloop);
+    if(last_time !== undefined){
+        var dt = (time - last_time) / 1000;
+        ball_world.step(fixed_time_step, dt, max_sub_steps);
+    }
+    var X_final = ball_body.position.x;
+    var Y_final = ball_body.position.y;
+    var Z_final = ball_body.position.z;
+    console.log("X position: " + ball_body.position.x);
+    console.log("Y position: " + ball_body.position.y);
+    console.log("Z position: " + ball_body.position.z);
+    last_time = time;
+
+})();
