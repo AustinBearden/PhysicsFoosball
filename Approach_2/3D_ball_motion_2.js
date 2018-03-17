@@ -27,7 +27,7 @@ function Ball() {
         //use the equation Rfinal = Rinitial + velocity * (time in motion)
         x_final = this.X + (velocity*Math.sin((directionXY*Math.PI)/180) * time);
         y_final = this.Y + (velocity*Math.cos((directionXY*Math.PI)/180) * time);
-        z_final = this.Z + (this.Velocity*Math.sin((directionXZ*Math.PI)/180) * time) - (0.5*(9.81)*((time)^2));
+        z_final = this.Z + (velocity*Math.sin((directionXZ*Math.PI)/180) * time) - (0.5*(9.81)*((time)^2));
         
         this.set_position(x_final, y_final, z_final);
 
