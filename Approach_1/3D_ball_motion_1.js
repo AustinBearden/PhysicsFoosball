@@ -67,7 +67,6 @@ function calculateAll() {
         //output to HTML page
         document.getElementById("z-axis").innerHTML = "Z-Position: " + Z_final + " meters";
         console.log("Z position: " + ball_body.position.z);
-        last_time = time;
 
 }
 
