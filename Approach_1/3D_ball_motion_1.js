@@ -59,13 +59,13 @@ function calculateAll() {
         var Y_final = ball_body.position.y;
         var Z_final = ball_body.position.z;
         //output to HTML page
-        document.getElementById("x-axis").innerHTML = X_final + " meters";
+        document.getElementById("x-axis").innerHTML = "X-Position: " + X_final + " meters";
         console.log("X position: " + ball_body.position.x);
         //output to HTML page
-        document.getElementById("y-axis").innerHTML = Y_final + " meters";
+        document.getElementById("y-axis").innerHTML = "Y-Position: " + Y_final + " meters";
         console.log("Y position: " + ball_body.position.y);
         //output to HTML page
-        document.getElementById("z-axis").innerHTML = Z_final + " meters";
+        document.getElementById("z-axis").innerHTML = "Z-Position: " + Z_final + " meters";
         console.log("Z position: " + ball_body.position.z);
         last_time = time;
 
