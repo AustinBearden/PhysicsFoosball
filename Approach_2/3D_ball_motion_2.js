@@ -5,6 +5,7 @@
 
 //including math library
 
+
 //Ball class
 function Ball() {
 
@@ -24,9 +25,9 @@ function Ball() {
 
         //now compute where ball will be after specified time given
         //use the equation Rfinal = Rinitial + velocity * (time in motion)
-        x_final = this.X + (velocity*Math.cos((directionXY*Math.PI)/180) * time);
-        y_final = this.Y + (velocity*Math.sin((directionXY*Math.PI)/180) * time);
-        z_final = this.Z + (velocity*Math.cos((directionXZ*Math.PI)/180) * time);
+        x_final = this.X + (velocity*Math.sin((directionXY*Math.PI)/180) * time);
+        y_final = this.Y + (velocity*Math.cos((directionXY*Math.PI)/180) * time);
+        z_final = this.Z + (this.Velocity*Math.sin((directionXZ*Math.PI)/180) * time) - (0.5*(9.81)*((time)^2));
         
         this.set_position(x_final, y_final, z_final);
 
