@@ -34,19 +34,19 @@ function Ball() {
     this.get_position_X = function() {
 
         //output to HTML page
-        document.getElementById("x-axis").innerHTML = this.X + " meters";
+        document.getElementById("x-axis").innerHTML = "X-Position: " + this.X + " meters";
 
     };
     this.get_position_Y = function() {
         
         //output to HTML page
-        document.getElementById("y-axis").innerHTML = this.Y + " meters";
+        document.getElementById("y-axis").innerHTML = "Y-Position: " + this.Y + " meters";
 
     };
     this.get_position_Z = function() {
 
         //output to HTML page
-        document.getElementById("z-axis").innerHTML = this.Z + " meters";
+        document.getElementById("z-axis").innerHTML = "Z-Position: " + this.Z + " meters";
 
     };
 
