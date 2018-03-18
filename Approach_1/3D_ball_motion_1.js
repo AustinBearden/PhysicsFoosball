@@ -24,14 +24,20 @@ function calculateAll() {
 
     //create the world
     var ball_world = new CANNON.World();
-    ball_world.gravity.set(0,0,-9.81); // meters/sec^2
+    ball_world.gravity.set(0,0,-9.81); // meters per seconds-squared
+
+    //velocity components
+    var V_xy = speed*Math.sin((XZangle*Math.PI)/180);
+    var V_z = speed*Math.cos((XZangle*Math.PI)/180);
+    var V_y = V_xy*Math.cos((XYangle*Math.PI)/180);
+    var V_x = V_xy*Math.sin((XYangle*Math.PI)/180);
 
     //create the ball
     var radius = 0; // meters
     var ball_body = new CANNON.Body({
-
         mass: 5, // kg
         position: new CANNON.Vec3(X_input,Y_input,Z_input), // meters
+        velocity: new CANNON.Vec3(V_x, V_y, V_z), // speed in meters per second
         shape: new CANNON.Sphere(radius)
 
     });
