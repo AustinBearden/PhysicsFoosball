@@ -2,8 +2,8 @@
 //Date Created: 3/16/2108
 //Project: PhysicsFoosball Approach 1
 
-//Special thank to schteppe for providing cannon.js physics engine on github for public us
-//Here's a link: https://github.com/schteppe/cannon.js
+//Special thank to schteppe for providing cannon.js physics engine on github for public use.
+//Here's a link: https://github.com/schteppe/cannon.js 
 
 //execute calculations when button is clicked
 function calculateAll() {
