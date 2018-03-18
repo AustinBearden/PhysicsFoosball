@@ -38,7 +38,7 @@ function calculateAll() {
     //create the ball
     var radius = 0; // meters
     var ball_body = new CANNON.Body({
-        mass: 5, // kg
+        mass: 0.05, // kg
         position: new CANNON.Vec3(X_input,Y_input,Z_input), // meters
         velocity: new CANNON.Vec3(V_x, V_y, V_z), // speed in meters per second
         shape: new CANNON.Sphere(radius)
@@ -60,7 +60,6 @@ function calculateAll() {
 
     //var fixed_time_step = 1.0 / 1.0; // seconds (So, steps per seconds or second per steps ??)
     //var max_sub_steps = 1; // figure out these last two lines
-
 
         ball_world.step(time);
 
