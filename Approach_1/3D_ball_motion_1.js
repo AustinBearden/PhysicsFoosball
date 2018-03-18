@@ -35,7 +35,7 @@ function calculateAll() {
     //create the ball
     var radius = 0; // meters
     var ball_body = new CANNON.Body({
-        mass: 0.005, // kg
+        mass: 5, // kg
         position: new CANNON.Vec3(X_input,Y_input,Z_input), // meters
         velocity: new CANNON.Vec3(V_x, V_y, V_z), // speed in meters per second
         shape: new CANNON.Sphere(radius)
