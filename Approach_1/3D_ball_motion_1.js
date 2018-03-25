@@ -50,7 +50,7 @@ function calculateAll() {
     // Create floor of ball world
     var world_ground = new CANNON.Body({
 
-        mass: 0 // mass == 0 makes the body static
+        mass: 5 // mass == 0 makes the body static
 
     });
 
