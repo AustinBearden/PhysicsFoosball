@@ -23,12 +23,12 @@ function Ball() {
     };
     this.move = function(velocity, directionXY, directionXZ, time) {
 
-        var V_xy = velocity*Math.sin(directionXZ*Math.PI/180);
+        var V_xy = velocity*Math.cos(directionXZ*Math.PI/180);
 
         //now compute where ball will be after specified time given
         //use the equation Rfinal = Rinitial + velocity * (time in motion)
-        x_final = this.X + (V_xy*Math.cos((directionXY*Math.PI)/180) * time);
-        y_final = this.Y + (V_xy*Math.sin((directionXY*Math.PI)/180) * time);
+        x_final = this.X + (V_xy*Math.cos(directionXY*Math.PI/180) * time);
+        y_final = this.Y + (V_xy*Math.sin(directionXY*Math.PI/180) * time);
         console.log("this.Z: " + this.Z);
         console.log("Velocity cosine: " + (velocity*Math.sin(directionXZ*Math.PI/180) * time));
         console.log("Last term of equation: " + (0.5*(-9.81)*(Math.pow(time, 2))));

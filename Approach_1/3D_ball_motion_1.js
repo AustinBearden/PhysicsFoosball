@@ -30,33 +30,37 @@ function calculateAll() {
     ball_world.gravity.set(0,0,-9.81); // meters per seconds-squared
 
     //velocity components
-    var V_xy = speed*Math.sin((XZangle*Math.PI)/180);
-    var V_z = speed*Math.cos((XZangle*Math.PI)/180);
-    var V_y = V_xy*Math.cos((XYangle*Math.PI)/180);
-    var V_x = V_xy*Math.sin((XYangle*Math.PI)/180);
+    var V_xy = speed*Math.cos(XZangle*Math.PI/180);
+    var V_z = speed*Math.sin(XZangle*Math.PI/180);
+    var V_y = V_xy*Math.sin(XYangle*Math.PI/180);
+    var V_x = V_xy*Math.cos(XYangle*Math.PI/180);
 
     //create the ball
-    var radius = 0; // meters
+    var radius = 6; // meters
     var ball_body = new CANNON.Body({
-        mass: 0.005, // kg
+        mass: 0.005,
         position: new CANNON.Vec3(X_input,Y_input,Z_input), // meters
-        velocity: new CANNON.Vec3(V_x, V_y, V_z), // speed in meters per second
-        shape: new CANNON.Sphere(radius)
+        velocity: new CANNON.Vec3(V_x, V_y, V_z) // speed in meters per second
 
     });
+    ball_body.linearDamping = 0.0;
 
     ball_world.addBody(ball_body);
 
     // Create floor of ball world
     var world_ground = new CANNON.Body({
 
-        mass: 5 // mass == 0 makes the body static
+        mass: 0 // mass == 0 makes the body static
 
     });
 
     var ground_shape = new CANNON.Plane();
     world_ground.addShape(ground_shape);
     ball_world.addBody(world_ground);
+
+    var ball_contact = new CANNON.ContactMaterial( ball_world, ball_body, 0.0, 0.0, 0.0);
+
+    ball_world.addContactMaterial(ball_contact);
 
     //var fixed_time_step = 1.0 / 1.0; // seconds (So, steps per seconds or second per steps ??)
     //var max_sub_steps = 1; // figure out these last two lines
