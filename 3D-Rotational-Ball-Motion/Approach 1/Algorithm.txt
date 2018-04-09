@@ -1,0 +1,39 @@
+Physics:
+
+      -> Angular displacement (theta):
+      
+         theta = theta sub naught + omega sub naught * time + (1/2) * alpha * time^2
+      
+      -> Angulare velocity (omega):
+     
+         omega = omega sub naught + alpha * time
+         --or--
+         omega^2 = omega sub naught ^2 + 2 * alpha *(theta - theta sub naught)
+      
+      -> Angular acceleration (alpha):
+      
+         alpha average = change in omega / change in time
+      
+      -> Kinetic energy of a rotating object:
+          K = (1/2)*I*omega^2 where I is moment of inertia
+          
+      -> 
+      
+
+Are we going to assume that there is no skidding?? Sure
+
+Non-slip conditions:
+
+Build in the condition that speed equal to zero means the ball stops
+
+Do we want to find out when friction takes out all energy from the ball?
+
+--------------
+
+We are not going to account for friction. We will simply assume non-slip conditions and then
+allow the user to specify a set acceleration. We are ultimatly wanting to find final position
+based on starting position, size of ball, speed, and acceleration. Thus, we will need to include
+the conversion between the angular displacement, angular velcoity, and angular acceleration versus
+the linear displacement, velocity, and acceleration respectively.
+
+--------------
