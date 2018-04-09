@@ -1,0 +1,14 @@
+Author: Austin Bearden
+Date Created: 3/11/2018
+Class: PHYS 290 Physics Foosball
+File: Approach_2 Specifications
+
+We will be defining the movement of a ball.
+For the ball, we will not be considering its size. The ball will just be a point with a specified mass.
+The ball will be moving in 3D space.
+We will specify the ball's x, y, and z-coordinates and its initial velocity. Then we will output specifics about
+the balls position and speed at a specified time after it is released.
+
+lets build a ball class
+Should we have a movement class that uses a ball? Or just movement methods that are a part of the ball class.
+Just movement methods that are part of the ball class

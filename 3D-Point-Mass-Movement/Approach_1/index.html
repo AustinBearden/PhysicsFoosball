@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!--
+PURPOSE: HTML file for running the physics engine Physics for Approach 1
+Author: Austin Bearden
+Date Created: 3/9/2018
+Last Modified: 3/12/2018
+Title: index.html
+-->
+
+<head>
+    <title>Physics Foosball: 3D Ball Motion</title>
+    
+</head>
+
+    <header>
+        
+        <h1>Motion of Ball [Approach 1] </h1>
+        <h2>Using CANNON.js Physics Engine</h2>
+
+	<div>Clone Repo at: 🐒
+		<a href="https://github.com/AustinBearden/PhysicsFoosball/tree/master/Approach_1">GitHub</a>
+	</div> <br/>
+
+    </header>
+
+<body>
+
+    <!-- Create an form that will take in all the starting parameters (X, Y, Z positions, starting velocity, and two angles) -->
+    <label>Starting X-Coordinate</label> 
+    <input type="text" id="Xcoord" name="Xcoor" value=""></input> <label>meters</label> <br/>
+    <label>Starting Y-Coordinate</label> 
+    <input type="text" id="Ycoord" name="Ycoor" value=""></input> <label>meters</label> <br/>
+    <label>Starting Z-Coordinate</label>
+    <input type="text" id="Zcoord" name="Zcoor" value=""></input> <label>meters</label>  <br/>
+    <label>Speed</label> 
+    <input type="text" id="SpeedInp" namd="Speed" value=""></input> <label>meters per second</label> <br/>
+    <label>X-Y Direction</label> 
+    <input type="text" id="XYDirection" namd="XYDirect" value=""></input> <label>degrees</label> <br/>
+    <label>X-Z Direction</label> 
+    <input type="text" id="XZDirection" namd="XZDirect" value=""></input> <label>degrees</label> <br/>
+    <label>Time</label> 
+    <input type="text" id="TimeInp" namd="Time" value=""></input> <label>seconds</label> <br/>
+    <!-- Button for submit -->
+    <input id="calculate" type="submit" name="Calculate"></input>
+
+    <!-- First start by giving output as simple output to screen from JavaScript file -->
+    <p> ------------------------------------- </p>
+    <p>Output:</p>
+    
+    <p id="x-axis"></p>
+    <p id="y-axis"></p>
+    <p id="z-axis"></p>
+
+
+    <!-- Inlcluding js script tage at end of body so that the html page can load before running js -->
+    <script src="cannon.js"></script>
+    <script src="3D_ball_motion_1.js"></script>
+
+</body>
+
+</html>
